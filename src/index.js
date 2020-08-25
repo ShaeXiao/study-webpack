@@ -1,6 +1,14 @@
 import _ from 'lodash';
 import printMe from './print.js'
-import './styles.css'
+// import './styles.css'
+
+class Peron {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+const p = new Peron('xx')
 
 function component() {
     var element = document.createElement('div');
