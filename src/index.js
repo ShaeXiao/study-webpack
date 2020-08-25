@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import printMe from './print.js'
-// import './styles.css'
+import './styles.css'
+import Img from './img.jpg'
 
 class Peron {
   constructor(name) {
@@ -15,6 +16,9 @@ function component() {
     var btn = document.createElement('button')
     // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    var myIcon = new Image();
+    myIcon.src = Img;
+    element.appendChild(myIcon);
     btn.innerHTML = 'Click me and check the console!';
     btn.onclick = printMe;
     element.appendChild(btn);
