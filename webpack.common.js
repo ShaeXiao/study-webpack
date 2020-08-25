@@ -9,7 +9,9 @@ module.exports = {
     plugins:[
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title:'Output Management'
+            title:'study',
+            template:path.resolve(__dirname, './src/index.html'),
+            inject:'body'
         }),
     ],
     output: {
