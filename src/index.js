@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import printMe from './print.js'
-import './styles.css'
+// import './styles.css'
+import './sass.scss'
 import Img from './img.jpg'
 
 class Peron {
