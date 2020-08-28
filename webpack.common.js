@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     entry: {
@@ -31,6 +32,11 @@ module.exports = {
                 },'sass-loader']
             },
             {
+                test:/\.vue$/,
+                exclude: /node_modules/,
+                use:['vue-loader']
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
@@ -50,6 +56,7 @@ module.exports = {
             template:path.resolve(__dirname, './src/index.html'),
             inject:'body'
         }),
+        new VueLoaderPlugin()
     ],
     output: {
       filename: '[name].bundle.js',
