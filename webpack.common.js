@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+// console.log(__dirname)
+// console.log(process.cwd())
 
 module.exports = {
     entry: {
@@ -42,7 +44,7 @@ module.exports = {
                     {
                     loader: 'url-loader',
                     options: {
-                        limit: 8192
+                        limit: 100 * 1024
                     }
                     }
                 ]
