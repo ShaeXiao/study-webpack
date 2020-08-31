@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="font-size:24px">
       this is vue1111222!
       <img :src="img" alt="">
   </div>
@@ -7,6 +7,7 @@
 
 <script>
 import img from './img.jpg'
+import saccs from './sass.scss'
 console.log(img)
 export default {
   data(){
@@ -18,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-  div {
-    color: red;
-  }
+  // div {
+  //   color: red;
+  // }
 </style>>

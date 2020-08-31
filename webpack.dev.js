@@ -6,7 +6,7 @@ module.exports = merge(common,{
     mode: 'development',
     devtool: 'inline-source-map',
     module:{
-        
+
     },
     devServer:{
       contentBase: './dist',
@@ -14,7 +14,7 @@ module.exports = merge(common,{
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production')
+            'process.env.NODE_ENV': JSON.stringify('development')
         })
     ]
 })
