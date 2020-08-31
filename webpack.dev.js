@@ -11,12 +11,26 @@ module.exports = merge(common,{
     devServer:{
       contentBase: './dist',
       hot:true,
-      proxy:{
-          '/':{
-             target:'http://10.10.0.55:3000',
-             changeOrigin:true
-          }
-      }
+    //   proxy:{
+    //       '/api':{
+    //          target:'http://10.10.0.55:3000',
+    //          changeOrigin:true,
+    //          pathRewrite: {"^/api" : ""}
+    //       },
+    //       '/apu':{
+    //         target:'http://10.10.0.55:4000',
+    //         changeOrigin:true,
+    //         pathRewrite: {"^/apu" : ""}
+    //      },
+    //   },
+      proxy:[
+        {
+            context:['/api','/data'],
+            target:'http://10.10.0.55:3000',
+            changeOrigin:true,
+            // pathRewrite: {"^/api" : ""}
+        }
+      ]
     },
     plugins: [
         new webpack.DefinePlugin({

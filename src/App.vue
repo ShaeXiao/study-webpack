@@ -9,7 +9,6 @@
 import img from "./img.jpg";
 import saccs from "./sass.css";
 import Axios from "axios";
-console.log(img);
 export default {
   data() {
     return {
@@ -19,10 +18,16 @@ export default {
   created() {
     Axios({
       method: "get",
-      url: "/data/login",
+      url: "/api/data/user",
     }).then(res => {
-      console.log(res)
+      console.log(res,1111)
     })
+    // Axios({
+    //   method: "get",
+    //   url: "/apu/login",
+    // }).then(res => {
+    //   console.log(res,2222)
+    // })
   },
 };
 </script>
