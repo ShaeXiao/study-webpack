@@ -14,7 +14,7 @@ module.exports = {
         rules:[
             {
                 test:/\.css$/,
-                use:[MiniCssExtractPlugin.loader,'style-loader', 'css-loader',{
+                use:['style-loader',MiniCssExtractPlugin.loader, 'css-loader',{
                     loader:'postcss-loader',
                     options:{
                         plugins:[
@@ -25,7 +25,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader',{
+                use: ['css-loader',{
                     loader:'postcss-loader',
                     options:{
                         plugins:[
@@ -60,9 +60,7 @@ module.exports = {
             inject:'body'
         }),
         new VueLoaderPlugin(),
-        new MiniCssExtractPlugin({
-            filename: 'css/index.css',
-        })
+        new MiniCssExtractPlugin()
     ],
     output: {
       filename: '[name].bundle.js',

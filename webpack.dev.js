@@ -10,7 +10,13 @@ module.exports = merge(common,{
     },
     devServer:{
       contentBase: './dist',
-      hot:true
+      hot:true,
+      proxy:{
+          '/':{
+             target:'http://10.10.0.55:3000',
+             changeOrigin:true
+          }
+      }
     },
     plugins: [
         new webpack.DefinePlugin({

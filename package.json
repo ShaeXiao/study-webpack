@@ -44,6 +44,7 @@
     "webpack-merge": "^5.1.2"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "lodash": "^4.17.20",
     "sass": "^1.26.10"
   },
