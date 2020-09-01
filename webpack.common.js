@@ -29,7 +29,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['css-loader',{
+                use: [MiniCssExtractPlugin.loader,'css-loader',{
                     loader:'postcss-loader',
                     options:{
                         plugins:[

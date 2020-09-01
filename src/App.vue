@@ -1,13 +1,14 @@
 <template>
-  <div style="font-size:24px">
-    this is vue1111222!
+  <div class="container">
     <img :src="img" alt />
+    <div class="la">yes!!</div>
+    <img src="./static/images/img.jpg" alt="">
   </div>
 </template>
 
 <script>
 import img from "img/img.jpg";
-import css from "css/sass.css";
+// import css from "css/sass.scss";
 import Axios from "axios";
 export default {
   data() {
@@ -33,7 +34,11 @@ export default {
 </script>
 
 <style lang="scss">
-// div {
-//   color: red;
-// }
-</style>>
+.container{
+  .la{
+    height: 200px;
+    background: url('img/img.jpg');
+  }
+  background: green;
+}
+</style>
