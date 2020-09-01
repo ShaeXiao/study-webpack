@@ -2,12 +2,13 @@
   <div class="container">
     <img :src="img" alt />
     <div class="la">yes!!</div>
-    <img src="./static/images/img.jpg" alt="">
+    <img src="~img/img.jpg" alt="">
   </div>
 </template>
 
 <script>
 import img from "img/img.jpg";
+console.log(img)
 // import css from "css/sass.scss";
 import Axios from "axios";
 export default {
@@ -37,7 +38,7 @@ export default {
 .container{
   .la{
     height: 200px;
-    background: url('img/img.jpg');
+    background: url('~img/img.jpg');
   }
   background: green;
 }
