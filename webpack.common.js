@@ -10,6 +10,10 @@ module.exports = {
     entry: {
         app:'./src/index.js',
     },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
     module:{
         rules:[
             {
@@ -45,7 +49,8 @@ module.exports = {
                     {
                     loader: 'url-loader',
                     options: {
-                        limit: 100 * 1024
+                        limit: 100 * 1024,
+                        outputPath: 'img/',
                     }
                     }
                 ]
@@ -60,10 +65,15 @@ module.exports = {
             inject:'body'
         }),
         new VueLoaderPlugin(),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: 'css/index.css',
+        })
     ],
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist')
-    },
+    resolve:{
+        alias:{
+            com:path.resolve(__dirname,'src/components'),
+            img:path.resolve(__dirname,'src/static/images'),
+            css:path.resolve(__dirname,'src/static/css'),
+        }
+    }
   };

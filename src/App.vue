@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import img from "./img.jpg";
-import saccs from "./sass.css";
+import img from "img/img.jpg";
+import css from "css/sass.css";
 import Axios from "axios";
 export default {
   data() {
