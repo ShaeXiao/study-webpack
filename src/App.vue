@@ -37,9 +37,9 @@ export default {
 <style lang="scss">
 .container{
   .la{
-    height: 200px;
+    height: 250px;
     background: url('~img/img.jpg');
   }
-  background: green;
+  // background: green;
 }
 </style>

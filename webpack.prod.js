@@ -21,7 +21,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader',{
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: '../',
+                    }
+                }, 'css-loader',{
                     loader:'postcss-loader',
                     options:{
                         plugins:[

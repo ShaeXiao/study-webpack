@@ -27,7 +27,6 @@ module.exports = {
                     }
                 }]
             },
-            
             {
                 test:/\.vue$/,
                 exclude: /node_modules/,
