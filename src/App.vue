@@ -3,17 +3,18 @@
     <img :src="img" alt />
     <!-- <div class="la">yes!!</div> -->
     <!-- <img src="~img/img.jpg" alt=""> -->
-    <!-- <a-date-picker /> -->
+    <a-date-picker />
     <a-button type="primary">
       Primary
     </a-button>
+    <!-- <a-input placeholder="Basic usage" /> -->
     <!-- <DatePicker></DatePicker> -->
   </div>
 </template>
 
 <script>
 import img from "img/img.jpg";
-import { Button,DatePicker } from 'ant-design-vue';
+import { Button,DatePicker,Input } from 'ant-design-vue';
 
 // console.log(img)
 // import css from "css/sass.scss";
@@ -21,7 +22,8 @@ import Axios from "axios";
 export default {
   components:{
     ADatePicker:DatePicker,
-    AButton:Button
+    AButton:Button,
+    AInput:Input
   },
   data() {
     return {
