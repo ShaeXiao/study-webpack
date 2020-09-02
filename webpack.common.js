@@ -39,6 +39,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 1 * 1024,
+                        // publicPath:'img',
                         outputPath: 'img/',
                         esModule: false
                     }
