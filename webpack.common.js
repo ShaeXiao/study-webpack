@@ -44,7 +44,27 @@ module.exports = {
                     }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.js$/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins:[
+                            [
+                                "import", 
+                                { 
+                                    "libraryName": "ant-design-vue", 
+                                    "libraryDirectory": "es", 
+                                    "style": "css" 
+                                }
+                            ]
+                        ]
+                    }
+                }],
+                exclude: /node_modules/
+            },
         ]
     },
     plugins:[

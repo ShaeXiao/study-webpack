@@ -9,16 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
     devtool: 'source-map',
     module:{
         rules:[
-            {
-                test: /\.js$/,
-                use: [{
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }],
-                exclude: /node_modules/
-            },
+            
             {
                 test: /\.scss$/,
                 use: [{
