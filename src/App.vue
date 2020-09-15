@@ -18,7 +18,7 @@ import { Button,DatePicker,Input } from 'ant-design-vue';
 
 // console.log(img)
 // import css from "css/sass.scss";
-import './mock/index'
+// import './mock/index'
 import Axios from "axios";
 
 export default {
@@ -33,24 +33,30 @@ export default {
     };
   },
   created() {
-    Axios({
-      method: "get",
-      url: "/api/data/user",
-    }).then(res => {
-      console.log(res,1111)
-    })
-     Axios({
-      method: "get",
-      url: "/api/data/test",
-    }).then(res => {
-      console.log(res,2222)
-    })
     // Axios({
     //   method: "get",
-    //   url: "/apu/login",
+    //   url: "/api/data/user",
+    // }).then(res => {
+    //   console.log(res,1111)
+    // })
+    //  Axios({
+    //   method: "get",
+    //   url: "/api/data/test",
     // }).then(res => {
     //   console.log(res,2222)
     // })
+    Axios({
+      method: "get",
+      url: "/",
+    }).then(res => {
+      console.log(res,2222)
+    })
+    Axios({
+      method: "get",
+      url: "/about",
+    }).then(res => {
+      console.log(res,2222)
+    })
   },
 };
 </script>
