@@ -48,6 +48,7 @@
     "ant-design-vue": "^1.6.5",
     "axios": "^0.20.0",
     "lodash": "^4.17.20",
+    "mockjs": "^1.1.0",
     "sass": "^1.26.10"
   },
   "browserslist": [
