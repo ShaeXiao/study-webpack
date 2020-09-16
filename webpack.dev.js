@@ -25,7 +25,7 @@ module.exports = merge(common,{
       hot:true,
       proxy:{
           '/':{
-             target:'http://10.10.0.55:3000',
+             target:'http://10.10.0.55:3004',
              changeOrigin:true,
             //  pathRewrite: {"^/api" : ""}
           },

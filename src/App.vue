@@ -45,12 +45,12 @@ export default {
     // }).then(res => {
     //   console.log(res,2222)
     // })
-    Axios({
-      method: "get",
-      url: "/",
-    }).then(res => {
-      console.log(res,2222)
-    })
+    // Axios({
+    //   method: "get",
+    //   url: "/",
+    // }).then(res => {
+    //   console.log(res,2222)
+    // })
     Axios({
       method: "get",
       url: "/about",
